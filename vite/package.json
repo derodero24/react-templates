@@ -1,6 +1,7 @@
 {
   "name": "react-template",
-  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "start": "vite",
     "build": "vite build",
