@@ -2,8 +2,9 @@
   "name": "react-template",
   "version": "0.1.0",
   "scripts": {
+    "start": "vite",
     "build": "vite build",
-    "start": "vite"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.1.0",
