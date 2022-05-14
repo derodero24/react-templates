@@ -7,10 +7,19 @@ specifiers:
   '@remix-run/netlify': ^1.4.3
   '@remix-run/node': ^1.4.3
   '@remix-run/react': ^1.4.3
+  '@tsconfig/strictest': ^1.0.1
   '@types/react': ^18.0.9
-  '@types/react-dom': ^18.0.3
+  '@types/react-dom': ^18.0.4
+  '@typescript-eslint/eslint-plugin': ^5.23.0
+  '@typescript-eslint/parser': ^5.23.0
   cross-env: ^7.0.3
   eslint: ^8.15.0
+  eslint-config-prettier: ^8.5.0
+  eslint-import-resolver-typescript: ^2.7.1
+  eslint-plugin-import: ^2.26.0
+  eslint-plugin-react: ^7.29.4
+  eslint-plugin-react-hooks: ^4.5.0
+  eslint-plugin-unused-imports: ^2.0.0
   react: ^18.1.0
   react-dom: ^18.1.0
   typescript: ^4.6.4
@@ -27,9 +36,18 @@ dependencies:
 devDependencies:
   '@remix-run/dev': 1.4.3_ef5jwxihqo6n7gxfmzogljlgcm
   '@remix-run/eslint-config': 1.4.3_t4cqyaxwbtpsab7uej7nin732q
+  '@tsconfig/strictest': 1.0.1
   '@types/react': 18.0.9
-  '@types/react-dom': 18.0.3
+  '@types/react-dom': 18.0.4
+  '@typescript-eslint/eslint-plugin': 5.23.0_c63nfttrfhylg3zmgcxfslaw44
+  '@typescript-eslint/parser': 5.23.0_hcfsmds2fshutdssjqluwm76uu
   eslint: 8.15.0
+  eslint-config-prettier: 8.5.0_eslint@8.15.0
+  eslint-import-resolver-typescript: 2.7.1_gwd37gqv3vjv3xlpl7ju3ag2qu
+  eslint-plugin-import: 2.26.0_j3mcmpo7om5tltq775lihvikb4
+  eslint-plugin-react: 7.29.4_eslint@8.15.0
+  eslint-plugin-react-hooks: 4.5.0_eslint@8.15.0
+  eslint-plugin-unused-imports: 2.0.0_oigbemwezw7cjyqb7ubidr4tyy
   typescript: 4.6.4
 
 packages:
@@ -909,6 +927,10 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
+  /@tsconfig/strictest/1.0.1:
+    resolution: {integrity: sha512-7O8Q537UQdTZSKEV0f5WRLRFtfL9B8agGqIZrCOwOiWvbjZWPP2rAoZ7LHcwjdG4vnjdleHMEE+ZetM+lhRkcA==}
+    dev: true
+
   /@types/acorn/4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
     dependencies:
@@ -1035,8 +1057,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react-dom/18.0.3:
-    resolution: {integrity: sha512-1RRW9kst+67gveJRYPxGmVy8eVJ05O43hg77G2j5m76/RFJtMbcfAs2viQ2UNsvvDg8F7OfQZx8qQcl6ymygaQ==}
+  /@types/react-dom/18.0.4:
+    resolution: {integrity: sha512-FgTtbqPOCI3dzZPZoC2T/sx3L34qxy99ITWn4eoSA95qPyXDMH0ALoAqUp49ITniiJFsXUVBtalh/KffMpg21Q==}
     dependencies:
       '@types/react': 18.0.9
     dev: true
@@ -2437,6 +2459,15 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /eslint-config-prettier/8.5.0_eslint@8.15.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.15.0
+    dev: true
+
   /eslint-import-resolver-node/0.3.6:
     resolution: {integrity: sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw==}
     dependencies:
@@ -2645,6 +2676,26 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    dev: true
+
+  /eslint-plugin-unused-imports/2.0.0_oigbemwezw7cjyqb7ubidr4tyy:
+    resolution: {integrity: sha512-3APeS/tQlTrFa167ThtP0Zm0vctjr4M44HMpeg1P4bK6wItarumq0Ma82xorMKdFsWpphQBlRPzw/pxiVELX1A==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.0.0
+      eslint: ^8.0.0
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.23.0_c63nfttrfhylg3zmgcxfslaw44
+      eslint: 8.15.0
+      eslint-rule-composer: 0.3.0
+    dev: true
+
+  /eslint-rule-composer/0.3.0:
+    resolution: {integrity: sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==}
+    engines: {node: '>=4.0.0'}
     dev: true
 
   /eslint-scope/5.1.1:
