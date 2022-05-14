@@ -1,6 +1,6 @@
 # Welcome to Remix!
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eefee776-83d4-4fd3-9d5c-da100e13624e/deploy-status)](https://app.netlify.com/sites/my-remix-app-derodero24/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2c6d4f28-8a02-453d-971f-6610dda1a586/deploy-status)](https://app.netlify.com/sites/derodero24-react-template-remix/deploys)
 
 - [Remix Docs](https://remix.run/docs)
 
