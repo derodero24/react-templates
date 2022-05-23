@@ -6,6 +6,6 @@ export default defineConfig({
   base: './',
   server: {
     open: true,
-    https: true,
+    // https: true,
   },
 });

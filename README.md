@@ -1,7 +1,6 @@
-# React Template
+# React Templates
 
 ## Library
 
-- pnpm
-- Vite
 - React
+- pnpm
