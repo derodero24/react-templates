@@ -1,13 +1,5 @@
-import type { Component } from 'solid-js';
-import Comp from './Comp';
+import type { JSXElement } from 'solid-js';
 
-const App: Component = () => {
-  return (
-    <>
-      <h1>Hello world!!!!</h1>
-      <Comp />
-    </>
-  );
-};
-
-export default App;
+export default function App(): JSXElement {
+  return <h1>Hello world!</h1>;
+}
