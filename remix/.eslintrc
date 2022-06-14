@@ -24,6 +24,12 @@
     }
   },
   "rules": {
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
     "import/order": [
       "warn",
       {
