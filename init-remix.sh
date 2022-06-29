@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ $# != 1 ]; then
-  echo "Please use like \n> sh init-react.sh <app-name>"
+  echo "Please use like \n> sh init-remix.sh <app-name>"
   exit 1
 fi
 
