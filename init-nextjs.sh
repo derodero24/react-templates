@@ -8,16 +8,17 @@ fi
 mkdir $1
 
 RELATIVE_DIR=`dirname "$0"`
+TEMPLATE_DIR=$RELATIVE_DIR/nextjs
 
 cp -r \
-  $RELATIVE_DIR/nextjs/public \
-  $RELATIVE_DIR/nextjs/src \
-  $RELATIVE_DIR/nextjs/.eslintrc \
-  $RELATIVE_DIR/nextjs/.gitignore \
-  $RELATIVE_DIR/nextjs/next.config.js \
-  $RELATIVE_DIR/nextjs/package.json \
-  $RELATIVE_DIR/nextjs/tsconfig.json \
-  $RELATIVE_DIR/nextjs/README.md \
-  $RELATIVE_DIR/nextjs/next-env.d.ts \
-  $RELATIVE_DIR/nextjs/pnpm-lock.yaml \
+  $TEMPLATE_DIR/public \
+  $TEMPLATE_DIR/src \
+  $TEMPLATE_DIR/.eslintrc \
+  $TEMPLATE_DIR/.gitignore \
+  $TEMPLATE_DIR/next.config.js \
+  $TEMPLATE_DIR/package.json \
+  $TEMPLATE_DIR/tsconfig.json \
+  $TEMPLATE_DIR/README.md \
+  $TEMPLATE_DIR/next-env.d.ts \
+  $TEMPLATE_DIR/pnpm-lock.yaml \
   $1

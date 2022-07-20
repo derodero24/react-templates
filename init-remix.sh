@@ -8,18 +8,19 @@ fi
 mkdir $1
 
 RELATIVE_DIR=`dirname "$0"`
+TEMPLATE_DIR=$RELATIVE_DIR/remix
 
 cp -r \
-  $RELATIVE_DIR/remix/app \
-  $RELATIVE_DIR/remix/public \
-  $RELATIVE_DIR/remix/.eslintrc \
-  $RELATIVE_DIR/remix/.gitignore \
-  $RELATIVE_DIR/remix/remix.config.js \
-  $RELATIVE_DIR/remix/server.js \
-  $RELATIVE_DIR/remix/package.json \
-  $RELATIVE_DIR/remix/tsconfig.json \
-  $RELATIVE_DIR/remix/README.md \
-  $RELATIVE_DIR/remix/netlify.toml \
-  $RELATIVE_DIR/remix/remix.env.d.ts \
-  $RELATIVE_DIR/remix/pnpm-lock.yaml \
+  $TEMPLATE_DIR/app \
+  $TEMPLATE_DIR/public \
+  $TEMPLATE_DIR/.eslintrc \
+  $TEMPLATE_DIR/.gitignore \
+  $TEMPLATE_DIR/remix.config.js \
+  $TEMPLATE_DIR/server.js \
+  $TEMPLATE_DIR/package.json \
+  $TEMPLATE_DIR/tsconfig.json \
+  $TEMPLATE_DIR/README.md \
+  $TEMPLATE_DIR/netlify.toml \
+  $TEMPLATE_DIR/remix.env.d.ts \
+  $TEMPLATE_DIR/pnpm-lock.yaml \
   $1

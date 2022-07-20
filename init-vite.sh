@@ -8,15 +8,16 @@ fi
 mkdir $1
 
 RELATIVE_DIR=`dirname "$0"`
+TEMPLATE_DIR=$RELATIVE_DIR/vite
 
 cp -r \
-  $RELATIVE_DIR/vite/src \
-  $RELATIVE_DIR/vite/.eslintrc \
-  $RELATIVE_DIR/vite/.gitignore \
-  $RELATIVE_DIR/vite/index.html \
-  $RELATIVE_DIR/vite/package.json \
-  $RELATIVE_DIR/vite/tsconfig.json \
-  $RELATIVE_DIR/vite/README.md \
-  $RELATIVE_DIR/vite/vite.config.ts \
-  $RELATIVE_DIR/vite/pnpm-lock.yaml \
+  $TEMPLATE_DIR/src \
+  $TEMPLATE_DIR/.eslintrc \
+  $TEMPLATE_DIR/.gitignore \
+  $TEMPLATE_DIR/index.html \
+  $TEMPLATE_DIR/package.json \
+  $TEMPLATE_DIR/tsconfig.json \
+  $TEMPLATE_DIR/README.md \
+  $TEMPLATE_DIR/vite.config.ts \
+  $TEMPLATE_DIR/pnpm-lock.yaml \
   $1
