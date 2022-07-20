@@ -10,7 +10,6 @@
     "prettier"
   ],
   "plugins": [
-    "tailwindcss",
     "unused-imports"
   ],
   "rules": {
