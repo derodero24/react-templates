@@ -15,6 +15,7 @@ cp -r \
   $TEMPLATE_DIR/src \
   $TEMPLATE_DIR/.eslintrc \
   $TEMPLATE_DIR/.gitignore \
+  $TEMPLATE_DIR/.prettierrc \
   $TEMPLATE_DIR/next.config.js \
   $TEMPLATE_DIR/postcss.config.js \
   $TEMPLATE_DIR/tailwind.config.js \

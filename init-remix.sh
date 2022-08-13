@@ -15,6 +15,7 @@ cp -r \
   $TEMPLATE_DIR/public \
   $TEMPLATE_DIR/.eslintrc \
   $TEMPLATE_DIR/.gitignore \
+  $TEMPLATE_DIR/.prettierrc \
   $TEMPLATE_DIR/remix.config.js \
   $TEMPLATE_DIR/server.js \
   $TEMPLATE_DIR/package.json \
