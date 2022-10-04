@@ -34,7 +34,7 @@ export function getAuthOptions(req: IncomingMessage): NextAuthOptions {
             return null;
           }
 
-          await siwe.validate(credentials?.signature || '');
+          await siwe.validate(credentials?.signature && '');
           return {
             id: siwe.address,
           };
