@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         <ConnectButton showBalance={true} />
         <ConnectButton showBalance={false} />
         <ConnectButton label="Hello" />
-      </main>{' '}
+      </main>
     </Layout>
   );
 };
