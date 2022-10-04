@@ -1,15 +1,9 @@
-import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
-import type { AppProps } from 'next/app';
-import {
-  RainbowKitProvider,
-  getDefaultWallets,
-  darkTheme,
-  lightTheme,
-} from '@rainbow-me/rainbowkit';
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
+import { getDefaultWallets, darkTheme } from '@rainbow-me/rainbowkit';
+import { chain, configureChains, createClient } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
+import { GetSiweMessageOptions } from '@rainbow-me/rainbowkit-siwe-next-auth';
 
 export const { chains, provider, webSocketProvider } = configureChains(
   [
@@ -42,3 +36,8 @@ export const wagmiClient = createClient({
 });
 
 export const theme = darkTheme();
+
+export const getSiweMessageOptions: GetSiweMessageOptions = () => ({
+  // 全角不可
+  statement: 'This is custom messege!! You can change at src/lib/rainbowkit.ts',
+});

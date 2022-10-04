@@ -9,8 +9,10 @@ specifiers:
   eslint-config-next: ^12.3.1
   ethers: ^5.5.1
   next: ^12.3.1
+  next-auth: ^4.12.2
   react: ^18.1.0
   react-dom: ^18.1.0
+  siwe: ^1.1.6
   typescript: ^4.8.4
   wagmi: ^0.6.7
 
@@ -19,8 +21,10 @@ dependencies:
   '@rainbow-me/rainbowkit-siwe-next-auth': 0.1.4_a74wx2n5htdlgymfa3goqdpgie
   ethers: 5.7.1
   next: 12.3.1_6tziyx3dehkoeijunclpkpolha
+  next-auth: 4.12.2_azq6kxkn3od7qdylwkyksrwopy
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  siwe: 1.1.6_ethers@5.7.1
   wagmi: 0.6.7_ddylbyfc5xeubgtcafrit5fuai
 
 devDependencies:
