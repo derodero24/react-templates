@@ -1,5 +1,5 @@
 import '@rainbow-me/rainbowkit/styles.css';
-import { darkTheme, getDefaultWallets } from '@rainbow-me/rainbowkit';
+import { getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
@@ -35,8 +35,6 @@ export const wagmiClient = createClient({
   provider,
   webSocketProvider,
 });
-
-export const theme = darkTheme();
 
 export const getSiweMessageOptions: GetSiweMessageOptions = () => ({
   // 全角不可
