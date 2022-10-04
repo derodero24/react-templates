@@ -2,12 +2,14 @@
 // with added process.env.VERCEL_URL detection to support preview deployments
 // and with auth option logic extracted into a 'getAuthOptions' function so it
 // can be used to get the session server-side with 'unstable_getServerSession'
-import { IncomingMessage } from 'http';
-import { NextApiRequest, NextApiResponse } from 'next';
-import NextAuth, { NextAuthOptions } from 'next-auth';
+
+import NextAuth, { NextAuthOptions, User } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { getCsrfToken } from 'next-auth/react';
 import { SiweMessage } from 'siwe';
+
+import type { IncomingMessage } from 'http';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export function getAuthOptions(req: IncomingMessage): NextAuthOptions {
   const providers = [
@@ -15,14 +17,10 @@ export function getAuthOptions(req: IncomingMessage): NextAuthOptions {
       async authorize(credentials) {
         try {
           const siwe = new SiweMessage(
-            JSON.parse(credentials?.message || '{}'),
+            JSON.parse(credentials?.message ?? '{}') as Partial<SiweMessage>,
           );
 
-          const nextAuthUrl =
-            process.env.NEXTAUTH_URL ||
-            (process.env.VERCEL_URL
-              ? `https://${process.env.VERCEL_URL}`
-              : null);
+          const nextAuthUrl = process.env.NEXTAUTH_URL;
           if (!nextAuthUrl) {
             return null;
           }
@@ -62,11 +60,9 @@ export function getAuthOptions(req: IncomingMessage): NextAuthOptions {
 
   return {
     callbacks: {
-      async session({ session, token }) {
-        session.address = token.sub;
-        session.user = {
-          name: token.sub,
-        };
+      session({ session, token }) {
+        session['address'] = token.sub;
+        session.user = { name: token.sub } as User;
         return session;
       },
     },
@@ -84,19 +80,22 @@ export function getAuthOptions(req: IncomingMessage): NextAuthOptions {
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   const authOptions = getAuthOptions(req);
 
-  if (!Array.isArray(req.query.nextauth)) {
+  if (!Array.isArray(req.query['nextauth'])) {
     res.status(400).send('Bad request');
     return;
   }
 
   const isDefaultSigninPage =
     req.method === 'GET' &&
-    req.query.nextauth.find(value => value === 'signin');
+    req.query['nextauth'].find(value => value === 'signin');
 
   // Hide Sign-In with Ethereum from default sign page
   if (isDefaultSigninPage) {
     authOptions.providers.pop();
   }
 
-  return await NextAuth(req, res, authOptions);
+  // console.log('stanorstuwfutouwf', await NextAuth(req, res, authOptions));
+
+  // ここで認証結果リターン
+  await NextAuth(req, res, authOptions);
 }

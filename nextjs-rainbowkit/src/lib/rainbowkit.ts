@@ -1,15 +1,16 @@
 import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, darkTheme } from '@rainbow-me/rainbowkit';
+import { darkTheme, getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import { GetSiweMessageOptions } from '@rainbow-me/rainbowkit-siwe-next-auth';
+
+import type { GetSiweMessageOptions } from '@rainbow-me/rainbowkit-siwe-next-auth';
 
 export const { chains, provider, webSocketProvider } = configureChains(
   [
     chain.mainnet,
     chain.polygon,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true'
+    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS
       ? [chain.goerli, chain.rinkeby]
       : []),
   ],

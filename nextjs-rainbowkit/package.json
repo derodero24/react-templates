@@ -1,29 +1,39 @@
 {
-  "name": "nextjs-rainbowkit",
+  "name": "nextjs-tailwind",
   "private": true,
-  "version": "0.1.0",
+  "license": "UNLICENSED",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next build && next start",
+    "dev": "next dev"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^0.7.0",
     "@rainbow-me/rainbowkit-siwe-next-auth": "^0.1.4",
-    "ethers": "^5.5.1",
-    "next": "^12.3.1",
+    "autoprefixer": "^10.4.12",
+    "ethers": "^5.7.1",
+    "next": "12.3.1",
     "next-auth": "^4.12.2",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "next-themes": "^0.2.1",
+    "postcss": "^8.4.17",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
     "siwe": "^1.1.6",
+    "tailwindcss": "^3.1.8",
     "wagmi": "^0.6.7"
   },
   "devDependencies": {
-    "@types/node": "^18.8.1",
-    "@types/react": "^18.0.21",
-    "eslint": "^8.24.0",
-    "eslint-config-next": "^12.3.1",
-    "typescript": "^4.8.4"
+    "@tsconfig/strictest": "^1.0.2",
+    "@types/node": "18.7.23",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-tailwindcss": "^3.6.2",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "typescript": "4.8.3"
   }
 }
