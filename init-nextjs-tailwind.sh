@@ -7,12 +7,13 @@ fi
 
 mkdir $1
 
-RELATIVE_DIR=`dirname "$0"`
+RELATIVE_DIR=$(dirname "$0")
 TEMPLATE_DIR=$RELATIVE_DIR/nextjs-tailwind
 
 cp -r \
   $TEMPLATE_DIR/public \
   $TEMPLATE_DIR/src \
+  $TEMPLATE_DIR/.env.local.example \
   $TEMPLATE_DIR/.eslintrc \
   $TEMPLATE_DIR/.gitignore \
   $TEMPLATE_DIR/.prettierrc \
