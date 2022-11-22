@@ -16,9 +16,9 @@ cp -r \
   $TEMPLATE_DIR/.env.local.example \
   $TEMPLATE_DIR/.eslintrc \
   $TEMPLATE_DIR/.gitignore \
-  $TEMPLATE_DIR/.prettierrc \
   $TEMPLATE_DIR/next.config.js \
   $TEMPLATE_DIR/postcss.config.js \
+  $TEMPLATE_DIR/prettier.config.js \
   $TEMPLATE_DIR/tailwind.config.js \
   $TEMPLATE_DIR/package.json \
   $TEMPLATE_DIR/tsconfig.json \
