@@ -15,9 +15,6 @@
     "plugin:react-hooks/recommended",
     "prettier"
   ],
-  "ignorePatterns": [
-    "*.config.js"
-  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
